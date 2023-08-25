@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 252, 172);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.createdBy {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  right: 10px;
+  font-size: x-small;
+}
+
+.social-links {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px; /* Add some margin for spacing */
+  display: flex; /* Arrange social links horizontally */
+  align-items: center; /* Vertically center the social links */
+}
