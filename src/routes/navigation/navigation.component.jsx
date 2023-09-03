@@ -4,8 +4,13 @@ import { ReactComponent as MatchMelLogo } from '../../assets/matchmel2.svg';
 import './navigation.styles.scss';
 import InstagramLink from "./insta.component";
 import FacebookLink from "./facebook.component";
+import { useTheme } from "../../themeContext";
+
+
 
 const Navigation = () => {
+  // eslint-disable-next-line no-unused-vars
+  const { isDarkTheme, toggleTheme } = useTheme();
   return (
     <Fragment>
       <div className="navigation">
@@ -21,6 +26,10 @@ const Navigation = () => {
             Sign In
           </Link>
         </div>
+
+      {/* <button onClick={toggleTheme}>
+        Toggle Theme: {isDarkTheme ? 'Dark' : 'Light'}
+      </button> */}
               {/*Social links below*/}
               <div className="social-links">
               <InstagramLink />
@@ -29,6 +38,7 @@ const Navigation = () => {
       </div>
       <Outlet />
     </Fragment>
+    
   );
 }
 
