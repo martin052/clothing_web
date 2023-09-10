@@ -4,7 +4,8 @@ import {
   signInWithRedirect, 
   signInWithPopup, 
   GoogleAuthProvider ,
-  createUserWithEmailAndPassword
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
 } from 'firebase/auth';
 import {
   getFirestore, doc, getDoc, setDoc
@@ -18,7 +19,7 @@ const firebaseConfig = {
     messagingSenderId: "1021685205472",
     appId: "1:1021685205472:web:2bbeb4dba7621f6a8a8385"
   };
-  
+  // eslint-disable-next-line no-unused-vars
   const firebaseApp = initializeApp(firebaseConfig);
 
   const provider = new GoogleAuthProvider();
@@ -70,4 +71,9 @@ return userDocRef;
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
   return await createUserWithEmailAndPassword(auth, email, password);
+}
+
+export const signInAuthWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+  return await signInWithEmailAndPassword(auth, email, password);
 }

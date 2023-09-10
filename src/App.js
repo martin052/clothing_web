@@ -2,9 +2,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/home/home.component';
 import './routes/App.scss';
 import Navigation from './routes/navigation/navigation.component';
-import SignIn from './routes/sign-in/sign-in.component';
+import Authentication from './routes/authentication/authentication.component';
 // import InstagramLink from './routes/navigation/insta.component';
-import ThemeToggle from './routes/themeToggle.jsx'
+// import ThemeToggle from './routes/themeToggle.jsx'
 import { 
   ThemeProvider, 
   useTheme, 
@@ -28,13 +28,13 @@ const Shop = () => {
 const App = () => {
   return (
     <ThemeProvider>
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
   <Routes>
   
-    <Route path='/' element={<Navigation />}>
+    <Route path='/' element={<Navigation /> }>
       <Route index element={<Home />}></Route>
       <Route path='shop' element={<Shop />}></Route>
-      <Route path='sign-in' element={<SignIn />}></Route>
+      <Route path='auth' element={<Authentication />}></Route>
     </Route>
   </Routes>
 
