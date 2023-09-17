@@ -1,14 +1,19 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { ReactComponent as MatchMelLogo } from '../../assets/matchmel2.svg';
 import './navigation.styles.scss';
 import InstagramLink from "./insta.component";
 import FacebookLink from "./facebook.component";
 import { useTheme } from "../../themeContext";
+import { UserContext } from "../../contexts/user.context";
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 
 
 const Navigation = () => {
+  const {currentUser} = useContext(UserContext);
+
+  // console.log(currentUser);
   // eslint-disable-next-line no-unused-vars
   const { isDarkTheme, toggleTheme } = useTheme();
   return (
@@ -22,9 +27,16 @@ const Navigation = () => {
           <Link className="nav-link" to='/shop'>
             SHOP
           </Link>
-          <Link className="nav-link" to='/auth'>
-            Sign In
-          </Link>
+          {
+            currentUser ? (
+              <span className="nav-link" onClick={signOutUser}>SIGN OUT</span>)
+              : (
+                <Link className="nav-link" to='/auth'>
+                  Sign In
+                </Link>
+            )
+          }
+          
         </div>
 
       {/* <button onClick={toggleTheme}>

@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa"; // Import Instagram icon from a li
 const InstagramLink = () => {
   return (
     <a
-      href="https://www.instagram.com/martin_0_5_2/"
+      href="https://www.instagram.com/melissillusion/"
       target="_blank"
       rel="noopener noreferrer"
     >

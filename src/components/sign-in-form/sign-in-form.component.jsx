@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { SignInWithGoogleRedirect, createUserDocumentFromAuth, auth, signInAuthWithEmailAndPassword} from "../../utils/firebase/firebase.utils";
+import { SignInWithGoogleRedirect, auth, signInAuthWithEmailAndPassword} from "../../utils/firebase/firebase.utils";
 import { getRedirectResult} from 'firebase/auth';
 import FormInput from "../form-input/form-input.component";
 import './sign-in-form.styles.scss';
 import Button from '../button/button.component';
+// import { UserContext } from "../../contexts/user.context";
 
 
 const defaultFormFields = {
@@ -15,14 +16,13 @@ const SignInForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const {email, password} = formFields;
 
-    // console.log(formFields);
+
+//sign in with Google!!
     useEffect(() => {
         const getResponse = async () => {
-            const response = await getRedirectResult(auth);
+            await getRedirectResult(auth);
 
-            if (response) {
-                await createUserDocumentFromAuth(response.user);
-            }
+            
         };
 
         getResponse().catch(console.error);
@@ -36,9 +36,9 @@ const SignInForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await signInAuthWithEmailAndPassword(email, password);
-            console.log(response);
-                resetFormFields();
+            await signInAuthWithEmailAndPassword(email, password);
+            // setCurrentUser(user);
+            resetFormFields();
         } catch(error) {  
             switch(error.code) {
                 case "auth/wrong-password":
