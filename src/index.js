@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { UserProvider } from './contexts/user.context';
 import './routes/navigation/insta.component.jsx';
 // import InstagramLink from './routes/navigation/insta.component.jsx';
+import { ProductsProvider } from './contexts/products.context';
 
 
 
@@ -18,7 +19,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <UserProvider>
+      <ProductsProvider>
       <App />
+      </ProductsProvider>
       </UserProvider>
       <i className='createdBy'>Created by <b><i>Martin Trembac</i></b></i>
     </BrowserRouter>
