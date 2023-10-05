@@ -8,6 +8,7 @@ import { UserProvider } from './contexts/user.context';
 import './routes/navigation/insta.component.jsx';
 // import InstagramLink from './routes/navigation/insta.component.jsx';
 import { ProductsProvider } from './contexts/products.context';
+import { CartProvider } from './contexts/cart.context';
 
 
 
@@ -20,7 +21,10 @@ root.render(
     <BrowserRouter>
     <UserProvider>
       <ProductsProvider>
+      <CartProvider>
       <App />
+      </CartProvider>
+      
       </ProductsProvider>
       </UserProvider>
       <i className='createdBy'>Created by <b><i>Martin Trembac</i></b></i>

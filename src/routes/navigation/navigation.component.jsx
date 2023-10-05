@@ -1,17 +1,24 @@
 import { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
-import { ReactComponent as MatchMelLogo } from '../../assets/matchmel2.svg';
+import { ReactComponent as MatchMelLogo } from '../../assets/MelissIllusion_logo.svg';
 import './navigation.styles.scss';
 import InstagramLink from "./insta.component";
 import FacebookLink from "./facebook.component";
 import { useTheme } from "../../themeContext";
+
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+
+import CartIcon from "../../components/cart-icon/cart-icon.component";
+
 import { UserContext } from "../../contexts/user.context";
+import { CartContext } from "../../contexts/cart.context";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 
 
 const Navigation = () => {
   const {currentUser} = useContext(UserContext);
+  const {isCartOpen} = useContext(CartContext);
 
   // console.log(currentUser);
   // eslint-disable-next-line no-unused-vars
@@ -36,18 +43,21 @@ const Navigation = () => {
                 </Link>
             )
           }
+          <CartIcon />
           
         </div>
-
+          
       {/* <button onClick={toggleTheme}>
         Toggle Theme: {isDarkTheme ? 'Dark' : 'Light'}
       </button> */}
               {/*Social links below*/}
-              <div className="social-links">
+             
+            {isCartOpen && <CartDropdown />}
+      </div>
+      <div className="social-links">
               <InstagramLink />
               <FacebookLink /> {/* Include the FacebookLink component here */}
             </div>
-      </div>
       <Outlet />
     </Fragment>
     
