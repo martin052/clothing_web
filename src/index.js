@@ -27,7 +27,7 @@ root.render(
       
       </ProductsProvider>
       </UserProvider>
-      <i className='createdBy'>Created by <b><i>Martin Trembac</i></b></i>
+      <i className='createdBy'>Owned by <b><i>Meliss Illusion</i></b></i>
     </BrowserRouter>
   </React.StrictMode>,
   

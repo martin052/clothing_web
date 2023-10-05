@@ -28,6 +28,8 @@ const Home = () => {
         //   "imageUrl": "https://wallpapercave.com/wp/wp8575689.jpg"
         // }
       ];
+
+      
       return <Directory categories={categories} />;
         
       

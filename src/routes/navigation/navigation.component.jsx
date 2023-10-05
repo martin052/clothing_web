@@ -43,6 +43,9 @@ const Navigation = () => {
                 </Link>
             )
           }
+          <Link className="nav-link" to='./about'>
+            About
+          </Link>
           <CartIcon />
           
         </div>
