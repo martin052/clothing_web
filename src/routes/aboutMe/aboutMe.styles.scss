@@ -1,6 +1,20 @@
-.aboutMe-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 10px;
-  row-gap: 50px;
+.aboutMe {
+  max-width: 100%; /* Adjust the width as needed */
+  display: flex;
+  justify-content: space-between; /* Put items at the start and end of the container */
+
+  .text-content {
+    flex: 1;
+    margin-right: 20px; /* Add spacing between text and image */
+  }
+
+  .myThings {
+    font-style: italic;
+    word-break: break-word;
+  }
+
+  .myImageAbout {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+  }
 }
