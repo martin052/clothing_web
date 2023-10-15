@@ -17,4 +17,11 @@
       font-size: 16px;
     }
   }
+  .arrow {
+    font-weight: bold; /* Make the arrows bold */
+    font-size: 18px; /* Adjust the arrow size */
+    color: grey; /* Apply grey color to arrows */
+    cursor: pointer; /* Add a pointer cursor for better interaction */
+    transition: color 0.3s;
+  }
 }
