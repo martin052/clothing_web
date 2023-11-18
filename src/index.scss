@@ -22,7 +22,7 @@ a {
 }
 
 .createdBy {
-  position: absolute;
+  position: fixed;
   margin: 0;
   bottom: 0;
   right: 10px;
@@ -30,7 +30,7 @@ a {
 }
 
 .social-links {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   margin: 10px; /* Add some margin for spacing */
