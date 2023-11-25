@@ -7,6 +7,12 @@ body {
   // background-color: rgb(255, 252, 172);
 }
 
+.ecommerce-container {
+  max-width: 1200px; /* Set the maximum width of your content */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add some padding for spacing */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

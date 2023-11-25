@@ -8,6 +8,7 @@ import AboutMe from "./routes/aboutMe/aboutMe.component";
 import Checkout from "./routes/checkout/checkout.component";
 // import InstagramLink from './routes/navigation/insta.component';
 // import ThemeToggle from './routes/themeToggle.jsx'
+
 import {
   ThemeProvider,
   // eslint-disable-next-line no-unused-vars
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <ThemeProvider>
       {/* <ThemeToggle /> */}
+
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />}></Route>
