@@ -7,8 +7,7 @@ import {
   NavLink,
   LogoContainer,
 } from "./navigation.styles";
-import InstagramLink from "./insta.component";
-import FacebookLink from "./facebook.component";
+
 import { useTheme } from "../../themeContext";
 
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
@@ -48,10 +47,7 @@ const Navigation = () => {
         </NavLinks>
         {isCartOpen && <CartDropdown />}
       </NavigationContainer>
-      <div className="social-links">
-        <InstagramLink />
-        <FacebookLink />
-      </div>
+
       <Outlet />
     </Fragment>
   );

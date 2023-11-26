@@ -4,7 +4,7 @@ import { FaFacebook } from "react-icons/fa"; // Import Facebook icon from a libr
 const FacebookLink = () => {
   return (
     <a
-      href="https://www.facebook.com/groups/851508359986835"
+      href="https://www.facebook.com/profile.php?id=61552403312482"
       target="_blank"
       rel="noopener noreferrer"
     >

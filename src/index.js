@@ -6,7 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { UserProvider } from "./contexts/user.context";
 import "./routes/navigation/insta.component.jsx";
-// import InstagramLink from './routes/navigation/insta.component.jsx';
+
 import { CategoriesProvider } from "./contexts/categories.context";
 import { CartProvider } from "./contexts/cart.context";
 
@@ -22,12 +22,6 @@ root.render(
           </CartProvider>
         </CategoriesProvider>
       </UserProvider>
-      <i className="createdBy">
-        Owned by{" "}
-        <b>
-          <i>Meliss Illusion</i>
-        </b>
-      </i>
     </BrowserRouter>
   </React.StrictMode>
 );

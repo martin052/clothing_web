@@ -6,16 +6,11 @@ import Authentication from "./routes/authentication/authentication.component";
 import Shop from "./routes/shop/shop.component";
 import AboutMe from "./routes/aboutMe/aboutMe.component";
 import Checkout from "./routes/checkout/checkout.component";
+// import Layout from "./components/particles/layout";
 // import InstagramLink from './routes/navigation/insta.component';
 // import ThemeToggle from './routes/themeToggle.jsx'
 
-import {
-  ThemeProvider,
-  // eslint-disable-next-line no-unused-vars
-  darkTheme,
-  // eslint-disable-next-line no-unused-vars
-  lightTheme,
-} from "./themeContext";
+import { ThemeProvider } from "./themeContext";
 
 const App = () => {
   return (

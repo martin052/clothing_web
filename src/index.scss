@@ -4,7 +4,12 @@ body {
   font-family: "Open Sans Condensed", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background-color: rgb(255, 252, 172);
+  background: rgb(255, 198, 253);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 198, 253, 1) 0%,
+    rgba(131, 255, 248, 1) 63%
+  );
 }
 
 .ecommerce-container {
